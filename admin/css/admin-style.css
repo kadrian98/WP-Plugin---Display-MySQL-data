@@ -1,2 +1,40 @@
-body {
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-left: -20px; */
+}
+
+.data-table,
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.data-table th {
+  padding: 10px 8px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn {
+  color: white;
+  background-color: #f44336;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+}
+
+#wpcontent {
+  padding-left: 0 !important;
 }
