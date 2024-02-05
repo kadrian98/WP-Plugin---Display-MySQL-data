@@ -51,8 +51,12 @@ class MainPlugin {
 
         public function enqueue_scripts() {
             wp_enqueue_style('twoja-nowa-wtyczka-css', plugin_dir_url(__FILE__) . '../admin/css/admin-style.css');
+            wp_enqueue_style('datatables-style', 'https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css', array(), null, 'all');
+            wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css', array(), '4.3.1', 'all');
             wp_enqueue_script('twoja-nowa-wtyczka-js', plugin_dir_url(__FILE__) . '../admin/js/admin-script.js');
-            wp_enqueue_script('jquery', get_template_directory_uri() . 'https://code.jquery.com/jquery-3.7.1.js', array(), false, false);
+            wp_enqueue_script('twoja-nowa-wtyczka-js-filter', plugin_dir_url(__FILE__) . '../admin/js/admin-script-filter.js');
+            wp_enqueue_script('jquery', get_template_directory_uri() . 'https://code.jquery.com/jquery-3.7.1.js', array(), false, false);          
+            wp_enqueue_script('datatables', 'https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js', array('jquery'), null, true);
 
             wp_localize_script('twoja-nowa-wtyczka-js', 'ajax_object', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
